@@ -3,6 +3,40 @@
 import { Asset, Entry } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 
+export interface IArticleFields {
+  /** Title */
+  title: string;
+
+  /** slug */
+  slug?: string | undefined;
+
+  /** Description */
+  description?: string | undefined;
+
+  /** Content */
+  content: Document;
+
+  /** Button text */
+  action?: string | undefined;
+}
+
+export interface IArticle extends Entry<IArticleFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "article";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
 export interface IComponentHeroFields {
   /** Internal Name */
   name: string;
@@ -306,6 +340,7 @@ export interface ISeo extends Entry<ISeoFields> {
 }
 
 export type CONTENT_TYPE =
+  | "article"
   | "component_hero"
   | "component_image"
   | "component_section"
