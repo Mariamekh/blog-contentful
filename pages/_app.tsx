@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable react/react-in-jsx-scope */
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import  'bootstrap/dist/css/bootstrap.min.css'

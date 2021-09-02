@@ -1,5 +1,6 @@
-/* eslint-disable @next/next/link-passhref */
-/* eslint-disable @next/next/no-typos */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable react/react-in-jsx-scope */
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
